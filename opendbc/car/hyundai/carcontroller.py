@@ -106,7 +106,7 @@ class CarController(CarControllerBase):
     can_canfd_hybrid = bool(self.CP.flags & HyundaiFlags.CAN_CANFD_HYBRID)
 
     # CAN-FD platforms
-    if self.CP.carFingerprint in CANFD_CAR or can_canfd_hybrid:
+    if self.CP.carFingerprint in HyundaiFlags.CANFD or can_canfd_hybrid:
       hda2_long = hda2 and self.CP.openpilotLongitudinalControl
 
       # steering control
