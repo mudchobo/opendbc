@@ -396,5 +396,5 @@ class CarState(CarStateBase):
     cam_bus = CanBus(CP).CAM if CP.flags & HyundaiFlags.CAN_CANFD_HYBRID else 2
     return {
       Bus.pt: CANParser(DBC[CP.carFingerprint][Bus.pt], pt_messages, pt_bus),
-      Bus.cam: CANParser(DBC[CP.carFingerprint][Bus.cam], cam_messages, cam_bus),
+      Bus.cam: CANParser(DBC[CP.carFingerprint][Bus.pt], cam_messages, cam_bus),
     }
