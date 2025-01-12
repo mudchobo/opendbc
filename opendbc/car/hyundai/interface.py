@@ -99,7 +99,7 @@ class CarInterface(CarInterfaceBase):
 
     if ret.flags & HyundaiFlags.CANFD_HDA2:
       ret.safetyConfigs[-1].safetyParam |= Panda.FLAG_HYUNDAI_CANFD_HDA2
-        
+
     # Common lateral control setup
 
     ret.centerToFront = ret.wheelbase * 0.4
